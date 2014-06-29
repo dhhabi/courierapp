@@ -7,7 +7,7 @@
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://${env.OPENSHIFT_MYSQL_DB_HOST}:${env.OPENSHIFT_MYSQL_DB_PORT}/${env.OPENSHIFT_APP_NAME}" />
+		<property name="url" value="jdbc:mysql://53af8dbb5973ca17a8000386-dhabi.rhcloud.com:61356/courierapp" />
 		<property name="username" value="root" />
 		<property name="password" value="" />
 	</bean>
