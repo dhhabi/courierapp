@@ -8,8 +8,8 @@
 
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 		<property name="url" value="jdbc:mysql://53af8dbb5973ca17a8000386-dhabi.rhcloud.com:61356/courierapp" />
-		<property name="username" value="root" />
-		<property name="password" value="" />
+		<property name="username" value="admin5BS6S9n" />
+		<property name="password" value="iz_YDUqMFlqw" />
 	</bean>
 
 </beans>
