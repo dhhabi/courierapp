@@ -7,7 +7,10 @@
 	<welcome-file-list>
 		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
-
+	
+	<!-- Default Servlet -->
+	 
+    
 	<!-- Spring MVC -->
 	<servlet>
 		<servlet-name>mvc-dispatcher</servlet-name>
