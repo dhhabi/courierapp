@@ -37,6 +37,10 @@ public class DeliveryBoyDaoImpl implements DeliveryBoyDao {
 		};
 		int valAdduser = jdbcTemplate.update(sqlAddUser);
 		int valRoles = jdbcTemplate.update(sqlAddUserRoles);
+		if(deliveryBoy.getUserRole().equals("ROLE_ADMIN")){
+			String sql2AddUserRoles ="INSERT INTO user_roles (username, ROLE) VALUES ('"+deliveryBoy.getUserName()+"', 'ROLE_USER')";
+			jdbcTemplate.update(sql2AddUserRoles);
+		}
 		int valDetails = jdbcTemplate.update(sqlAddUserDetails,params);
 		if(valAdduser > 0 && valRoles > 0 && valDetails > 0)
 			return true;

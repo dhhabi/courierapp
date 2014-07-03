@@ -66,7 +66,7 @@ public class DeliveryBoyValidatior implements Validator {
 		}
 		
 		if(!ValidateFields.isPhoneNumberValid(deliveryBoy.getPhoneNumber())){
-			errors.rejectValue("emailId", "unvalid.emailId");
+			errors.rejectValue("phoneNumber", "unvalid.phoneNumber");
 		}
 		
 		if(!ValidateFields.isNumericOrNull(deliveryBoy.getZipCode())){
