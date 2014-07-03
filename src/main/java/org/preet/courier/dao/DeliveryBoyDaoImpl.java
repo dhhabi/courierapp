@@ -53,7 +53,7 @@ public class DeliveryBoyDaoImpl implements DeliveryBoyDao {
 	
 	@Override
 	public int checkUserAvailablity(String username) {
-		String sqlQuery = "SELECT COUNT(username) FROM USERS WHERE username='"+username+"'";
+		String sqlQuery = "SELECT COUNT(username) FROM users WHERE username='"+username+"'";
 		//jdbcTemplate.setDataSource(getDataSource());
 		return jdbcTemplate.queryForObject(sqlQuery, Integer.class);
 	}
