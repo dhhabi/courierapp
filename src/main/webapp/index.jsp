@@ -29,7 +29,8 @@
         <img class="paperclip" src="<c:url value="/resources/images/paperclip.png" />" alt="paperclip" />
         <div class="sidebar">
         <!-- insert your sidebar items here -->
-        <h3>Latest News</h3>
+        <h3>Useful Links</h3>
+        <h4><a href="deliveryBoy.admin">Member Login!</a></h4>
        <!-- <h4>No news</h4>
         <h5></h5>
         <p>Put your latest news item here, or anything else you would like in the sidebar!<br /><a href="#">Read more</a></p>

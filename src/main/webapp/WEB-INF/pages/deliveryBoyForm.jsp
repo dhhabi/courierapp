@@ -26,7 +26,6 @@
         <h1>Priority<a href="#">Ds</a></h1>
       </div>
       <jsp:include page="menu.jsp" />
-      
     </div>
     <div id="site_content">
       <div id="sidebar_container">
