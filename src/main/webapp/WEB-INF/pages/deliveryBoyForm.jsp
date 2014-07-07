@@ -32,7 +32,7 @@
         <img class="paperclip" src="<c:url value="/resources/images/paperclip.png" />" alt="paperclip" />
         <div class="sidebar">
         <h3>       </h3>
-        <!-- Logout Code -->
+    <!-- Logout Code -->
     <c:url value="/j_spring_security_logout" var="logoutUrl" />
 	<form action="${logoutUrl}" method="post" id="logoutForm">
 		<input type="hidden" name="${_csrf.parameterName}"
@@ -51,10 +51,8 @@
 		</h2>
 	</c:if>
 	<!-- Logout code ends -->
-        <h4>Find you work !</h4>
-        <h5><a href="deliveryBoy.admin">Add Member !</a></h5>
-    
-           
+        <!-- admin Menu -->
+           <jsp:include page="adminMenu.jsp" />
         </div>
         
         

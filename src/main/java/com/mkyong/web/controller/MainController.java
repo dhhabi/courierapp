@@ -13,16 +13,16 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class MainController {
 
-	/*@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
+	@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
 	public ModelAndView defaultPage() {
 
 		ModelAndView model = new ModelAndView();
 		model.addObject("title", "Priority Dispatch Service !");
 		model.addObject("message", "This is default page!");
-		model.setViewName("hello");
+		model.setViewName("adminWelcome");
 		return model;
 
-	}*/
+	}
 
 	@RequestMapping(value = "/.admin", method = RequestMethod.GET)
 	public ModelAndView adminPage() {

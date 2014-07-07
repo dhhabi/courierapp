@@ -8,6 +8,23 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-
+	<context:annotation-config />
+	
+	<context:component-scan base-package="org.preet.courier" />
+	
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="packagesToScan" value="org.preet.courier.model"/>
+		<property name="configLocation">
+			<value>classpath:hibernate.cfg.xml</value>
+		</property>
+		<property name="hibernateProperties">
+		<props>
+			<prop key="dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+			<prop key="hibernate.show_sql">true</prop>
+			<prop key="hbm2ddl.auto">create</prop>
+		</props>
+		</property>
+	</bean>
 
 </beans>

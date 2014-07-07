@@ -90,5 +90,22 @@ public class DeliveryBoyDaoImpl implements DeliveryBoyDao {
 		this.encoder = encoder;
 	}
 
+	@Override
+	public boolean enableDisableDeliveryBoy(String username, Boolean enabled) {
+		// TODO Auto-generated method stub
+		String status;
+		if(enabled)
+			status="TRUE";
+		else
+			status="FALSE";
+		String query ="UPDATE USERS SET enabled = "+status+" WHERE username = '"+username+"'";
+		int i = jdbcTemplate.update(query);
+		if(i>0){
+			return true;
+		}
+		return false;
+	}
+
+	
 	
 }
