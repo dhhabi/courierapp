@@ -4,7 +4,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@page session="true"%>
-<!-- <c:url value="/resources/images/jbosscorp_logo.png" /> -->
+<!-- <c:url value="" /> -->
 <html>
 
 <head>
@@ -53,13 +53,13 @@
 	</c:if>
 	<!-- Logout code ends -->
         <!-- admin Menu -->
-           <jsp:include page="adminMenu.jsp" />
+          
         </div>
         
         
       </div>
       <div id="content">
-      <h3>Welcome !</h3>      
+      <jsp:include page="orderForm.jsp" />
       </div>
     </div>
     <div id="footer">

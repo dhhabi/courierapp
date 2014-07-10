@@ -3,6 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@page session="true"%>
 <!-- <c:url value="" /> -->
 <html>
 
@@ -52,13 +53,13 @@
 	</c:if>
 	<!-- Logout code ends -->
         <!-- admin Menu -->
-          
+         <jsp:include page="userMenu.jsp" />
         </div>
         
         
       </div>
       <div id="content">
-      <jsp:include page="orderForm.jsp" />
+      <h3>Welcome User !</h3>
       </div>
     </div>
     <div id="footer">

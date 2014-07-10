@@ -23,10 +23,9 @@ public class OrderController {
 	public String orderFormRequest(ModelMap model) {
 		MyOrder order = new MyOrder();
 		model.addAttribute("order", order);
-		return "userWelcome";
+		return "orderFormPage";
 
 	}
-	
 	
 	@RequestMapping(method = RequestMethod.POST)
 	public ModelAndView processOrderSubmit(

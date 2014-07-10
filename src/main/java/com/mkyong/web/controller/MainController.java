@@ -23,8 +23,10 @@ public class MainController {
 		ModelAndView model = new ModelAndView();
 		model.addObject("title", "Priority Dispatch Service !");
 		model.addObject("message", "This is default page!");
+		if(hasRole("ROLE_ADMIN"))
 		model.setViewName("adminWelcome");
-		
+		else
+			model.setViewName("userWelcome");
 		return model;
 	}
 
@@ -81,7 +83,8 @@ public class MainController {
 	
 	
 	private boolean hasRole(String role) {
-		  Collection<GrantedAuthority> authorities = (Collection<GrantedAuthority>)
+		  @SuppressWarnings("unchecked")
+		Collection<GrantedAuthority> authorities = (Collection<GrantedAuthority>)
 		  SecurityContextHolder.getContext().getAuthentication().getAuthorities();
 		  boolean hasRole = false;
 		  for (GrantedAuthority authority : authorities) {
