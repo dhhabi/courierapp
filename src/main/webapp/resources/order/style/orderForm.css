@@ -1,0 +1,845 @@
+#orderForm .sfm_textbox
+{
+    padding:1px;
+}
+#orderForm .sfm_textarea
+{
+    padding:2px;
+    resize:none;
+}
+#orderForm .error_strings
+{
+    font-family:Verdana;
+    font-size:12px;
+    color:#660000;
+}
+#orderForm img
+{
+    border:0;
+}
+#orderForm .loading_div
+{
+    background-color:transparent;
+    background-image:url("images/loading.gif");
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+#orderForm input[type='submit'],input[type='reset']
+{
+    font:inherit;
+    color:inherit;
+}
+#orderForm .sfm_cr_box
+{
+    font-family:Verdana;
+    font-size:10px;
+    color:#888888;
+}
+#orderForm .sfm_cr_box a
+{
+    color:#888888;
+}
+#orderForm .form_outer_div
+{
+    border:none;
+    background-color:#ffffff;
+}
+#orderForm .sfm_form_label
+{
+    background-color:transparent;
+}
+#orderForm .element_label
+{
+    background-color:transparent;
+}
+body#sfm_orderForm_body
+{
+    background-color:transparent;
+    font-family:Arial;
+    font-size:12px;
+    color:#000000;
+    margin:0px;
+}
+#orderForm .form_outer_div
+{
+    font-family:Arial;
+    font-size:12px;
+    color:#000000;
+}
+#orderForm .form_subheading
+{
+    background-color:transparent;
+    margin:0;
+    padding:0;
+}
+#orderForm .sfm_float_error_box
+{
+    font-family:Verdana;
+    font-size:12px;
+    color:#eeeeee;
+    background:none repeat scroll 0 0 #333333;
+    border:0;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow:0 0 4px #333;
+    border:none;
+}
+#orderForm .sfm_close_box
+{
+    font-family:Verdana;
+    font-size:12px;
+    color:#eeeeee;
+}
+#orderForm .progress_box_container
+{
+    border:1px solid #8e8e8e;
+    background-color:#cccccc;
+    font-family:Arial;
+    font-size:10px;
+    color:#ffffff;
+    text-align:center;
+    vertical-align:middle;
+}
+#orderForm .progress_box
+{
+    background-color:#333333;
+    width:2px;
+    float:left;
+    margin:2px;
+}
+#orderForm .page_heading
+{
+    background-color:transparent;
+    margin:0;
+    padding:0;
+}
+#orderForm .page_number
+{
+    background-color:transparent;
+}
+
+
+#orderForm #heading_container
+{
+    position:absolute;
+    left:113px;
+    top:40px;
+    width:160px;
+    height:20px;
+    z-index:27;
+}
+#orderForm #heading
+{
+    position:absolute;
+    top:0px;
+    left:0px;
+    text-align:left;
+}
+#orderForm #heading1_container
+{
+    position:absolute;
+    left:532px;
+    top:45px;
+    width:160px;
+    height:20px;
+    z-index:28;
+}
+#orderForm #heading1
+{
+    position:absolute;
+    top:0px;
+    left:0px;
+    text-align:left;
+}
+#orderForm #label2_container
+{
+    position:absolute;
+    left:17px;
+    top:84px;
+    width:86px;
+    height:20px;
+    z-index:1;
+}
+#orderForm #label2
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #label12_container
+{
+    position:absolute;
+    left:435px;
+    top:84px;
+    width:86px;
+    height:20px;
+    z-index:13;
+}
+#orderForm #label12
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #sender_container
+{
+    position:absolute;
+    left:113px;
+    top:83px;
+    z-index:2;
+}
+#orderForm #sender
+{
+    float:left;
+    width:156px;
+    z-index:2;
+}
+#orderForm #receiver_container
+{
+    position:absolute;
+    left:531px;
+    top:83px;
+    z-index:14;
+}
+#orderForm #receiver
+{
+    float:left;
+    width:156px;
+    z-index:14;
+}
+#orderForm #label6_container
+{
+    position:absolute;
+    left:42px;
+    top:110px;
+    width:60px;
+    height:20px;
+    z-index:6;
+}
+#orderForm #label6
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #label14_container
+{
+    position:absolute;
+    left:460px;
+    top:110px;
+    width:60px;
+    height:20px;
+    z-index:19;
+}
+#orderForm #label14
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #deliveryStreet_container
+{
+    position:absolute;
+    left:531px;
+    top:109px;
+    z-index:15;
+}
+#orderForm #deliveryStreet
+{
+    float:left;
+    width:295px;
+    z-index:15;
+}
+#orderForm #pickUpStreet_container
+{
+    position:absolute;
+    left:113px;
+    top:109px;
+    z-index:26;
+}
+#orderForm #pickUpStreet
+{
+    float:left;
+    width:295px;
+    z-index:26;
+}
+#orderForm #label7_container
+{
+    position:absolute;
+    left:42px;
+    top:133px;
+    width:60px;
+    height:20px;
+    z-index:7;
+}
+#orderForm #label7
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #label15_container
+{
+    position:absolute;
+    left:460px;
+    top:133px;
+    width:60px;
+    height:20px;
+    z-index:20;
+}
+#orderForm #label15
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #label4_container
+{
+    position:absolute;
+    left:262px;
+    top:136px;
+    width:60px;
+    height:20px;
+    z-index:5;
+}
+#orderForm #label4
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #label13_container
+{
+    position:absolute;
+    left:680px;
+    top:136px;
+    width:60px;
+    height:20px;
+    z-index:18;
+}
+#orderForm #label13
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #pickUpCity_container
+{
+    position:absolute;
+    left:113px;
+    top:135px;
+    z-index:3;
+}
+#orderForm #pickUpCity
+{
+    float:left;
+    width:87px;
+    z-index:3;
+}
+#orderForm #pickUpZipCode_container
+{
+    position:absolute;
+    left:330px;
+    top:135px;
+    z-index:4;
+}
+#orderForm #pickUpZipCode
+{
+    float:left;
+    width:78px;
+    z-index:4;
+}
+#orderForm #deliveryCity_container
+{
+    position:absolute;
+    left:531px;
+    top:135px;
+    z-index:16;
+}
+#orderForm #deliveryCity
+{
+    float:left;
+    width:87px;
+    z-index:16;
+}
+#orderForm #deliveryZipCode_container
+{
+    position:absolute;
+    left:748px;
+    top:135px;
+    z-index:17;
+}
+#orderForm #deliveryZipCode
+{
+    float:left;
+    width:78px;
+    z-index:17;
+}
+#orderForm #label9_container
+{
+    position:absolute;
+    left:44px;
+    top:160px;
+    width:60px;
+    height:20px;
+    z-index:10;
+}
+#orderForm #label9
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #label17_container
+{
+    position:absolute;
+    left:462px;
+    top:160px;
+    width:60px;
+    height:20px;
+    z-index:23;
+}
+#orderForm #label17
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #label8_container
+{
+    position:absolute;
+    left:262px;
+    top:161px;
+    width:29px;
+    height:20px;
+    z-index:9;
+}
+#orderForm #label8
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #label16_container
+{
+    position:absolute;
+    left:680px;
+    top:161px;
+    width:29px;
+    height:20px;
+    z-index:22;
+}
+#orderForm #label16
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #pickUpPhoneNumber_container
+{
+    position:absolute;
+    left:113px;
+    top:160px;
+    z-index:8;
+}
+#orderForm #pickUpPhoneNumber
+{
+    float:left;
+    width:114px;
+    z-index:8;
+}
+#orderForm #deliveryPhoneNumber_container
+{
+    position:absolute;
+    left:531px;
+    top:160px;
+    z-index:21;
+}
+#orderForm #deliveryPhoneNumber
+{
+    float:left;
+    width:114px;
+    z-index:21;
+}
+#orderForm #pickUpDate_container
+{
+    position:absolute;
+    left:299px;
+    top:161px;
+    width:140px;
+    height:22px;
+    z-index:42;
+}
+#orderForm #pickUpDate
+{
+    float:left;
+    width:108px;
+    z-index:42;
+    margin:0px;
+}
+#orderForm #pickUpDate_image_container
+{
+    float:left;
+    width:20px;
+    z-index:42;
+    height:100%;
+    position:relative;
+}
+#orderForm #pickUpDate_image
+{
+    position:absolute;
+    top:50%;
+    margin-top:-10px;
+}
+#orderForm #deliveryDate_container
+{
+    position:absolute;
+    left:719px;
+    top:161px;
+    width:140px;
+    height:22px;
+    z-index:43;
+}
+#orderForm #deliveryDate
+{
+    float:left;
+    width:108px;
+    z-index:43;
+    margin:0px;
+}
+#orderForm #deliveryDate_image_container
+{
+    float:left;
+    width:20px;
+    z-index:43;
+    height:100%;
+    position:relative;
+}
+#orderForm #deliveryDate_image
+{
+    position:absolute;
+    top:50%;
+    margin-top:-10px;
+}
+#orderForm #label27_container
+{
+    position:absolute;
+    left:689px;
+    top:187px;
+    width:60px;
+    height:20px;
+    z-index:47;
+}
+#orderForm #label27
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #pickUpTime_container
+{
+    position:absolute;
+    left:335px;
+    top:186px;
+    z-index:44;
+}
+#orderForm #pickUpTime
+{
+    float:left;
+    width:74px;
+    z-index:44;
+}
+#orderForm #label26_container
+{
+    position:absolute;
+    left:264px;
+    top:188px;
+    width:60px;
+    height:20px;
+    z-index:46;
+}
+#orderForm #label26
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #deliveryTime_container
+{
+    position:absolute;
+    left:760px;
+    top:187px;
+    z-index:45;
+}
+#orderForm #deliveryTime
+{
+    float:left;
+    width:70px;
+    z-index:45;
+}
+#orderForm #label11_container
+{
+    position:absolute;
+    left:45px;
+    top:211px;
+    width:60px;
+    height:20px;
+    z-index:12;
+}
+#orderForm #label11
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #label19_container
+{
+    position:absolute;
+    left:463px;
+    top:211px;
+    width:60px;
+    height:20px;
+    z-index:25;
+}
+#orderForm #label19
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #pickUpComments_container
+{
+    position:absolute;
+    left:114px;
+    top:213px;
+    z-index:11;
+}
+#orderForm #pickUpComments
+{
+    float:left;
+    width:294px;
+    height:34px;
+    z-index:11;
+}
+#orderForm #deliveryComments_container
+{
+    position:absolute;
+    left:532px;
+    top:213px;
+    z-index:24;
+}
+#orderForm #deliveryComments
+{
+    float:left;
+    width:294px;
+    height:34px;
+    z-index:24;
+}
+#orderForm #label20_container
+{
+    position:absolute;
+    left:43px;
+    top:271px;
+    width:60px;
+    height:20px;
+    z-index:30;
+}
+#orderForm #label20
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #caller_container
+{
+    position:absolute;
+    left:112px;
+    top:270px;
+    z-index:29;
+}
+#orderForm #caller
+{
+    float:left;
+    width:171px;
+    z-index:29;
+}
+#orderForm #label21_container
+{
+    position:absolute;
+    left:45px;
+    top:294px;
+    width:60px;
+    height:20px;
+    z-index:31;
+}
+#orderForm #label21
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #reference_container
+{
+    position:absolute;
+    left:113px;
+    top:295px;
+    z-index:32;
+}
+#orderForm #reference
+{
+    float:left;
+    width:114px;
+    z-index:32;
+}
+#orderForm #label22_container
+{
+    position:absolute;
+    left:20px;
+    top:323px;
+    width:85px;
+    height:20px;
+    z-index:33;
+}
+#orderForm #label22
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #DropdownList_container
+{
+    position:absolute;
+    left:113px;
+    top:321px;
+    z-index:41;
+}
+#orderForm #DropdownList
+{
+    float:left;
+    width:223px;
+    height:22px;
+    z-index:41;
+}
+#orderForm #label24_container
+{
+    position:absolute;
+    left:241px;
+    top:347px;
+    width:87px;
+    height:20px;
+    z-index:36;
+}
+#orderForm #label24
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #noOfPieces_container
+{
+    position:absolute;
+    left:336px;
+    top:347px;
+    z-index:37;
+}
+#orderForm #noOfPieces
+{
+    float:left;
+    width:72px;
+    z-index:37;
+}
+#orderForm #approxWeight_container
+{
+    position:absolute;
+    left:112px;
+    top:347px;
+    z-index:35;
+}
+#orderForm #approxWeight
+{
+    float:left;
+    width:111px;
+    z-index:35;
+}
+#orderForm #label23_container
+{
+    position:absolute;
+    left:11px;
+    top:350px;
+    width:94px;
+    height:20px;
+    z-index:34;
+}
+#orderForm #label23
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #label25_container
+{
+    position:absolute;
+    left:44px;
+    top:375px;
+    width:60px;
+    height:20px;
+    z-index:38;
+}
+#orderForm #label25
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #email_container
+{
+    position:absolute;
+    left:111px;
+    top:374px;
+    z-index:39;
+}
+#orderForm #email
+{
+    float:left;
+    width:238px;
+    z-index:39;
+}
+#orderForm #Submit_container
+{
+    position:absolute;
+    left:448px;
+    top:373px;
+    width:122px;
+    height:25px;
+    z-index:40;
+}
+#orderForm #Submit
+{
+    float:left;
+    width:122px;
+    height:25px;
+    z-index:40;
+}

@@ -5,8 +5,6 @@ import org.preet.courier.dao.DeliveryBoyDao;
 import org.preet.courier.model.DeliveryBoy;
 import org.preet.courier.validator.DeliveryBoyValidatior;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;

@@ -30,19 +30,16 @@
         <div class="sidebar">
         <!-- insert your sidebar items here -->
         <h3>Useful Links</h3>
-        <h4><a href="deliveryBoy.admin">Member Login!</a></h4>
+        <a href="deliveryBoy.admin">Admin Login!</a><br>
+         <a href="orderForm.user">Member Login!</a>
        <!-- <h4>No news</h4>
         <h5></h5>
         <p>Put your latest news item here, or anything else you would like in the sidebar!<br /><a href="#">Read more</a></p>
        --> </div>
         <img class="paperclip" src="<c:url value="/resources/images/paperclip.png" />" alt="paperclip" />
         <div class="sidebar">
-          <h3>Newsletter</h3>
-         <!-- <p>If you would like to receive our newletter, please enter your email address and click 'Subscribe'.</p>
-          <form method="post" action="#" id="subscribe">
-            <p style="padding: 0 0 9px 0;"><input class="search" type="text" name="email_address" value="your email address" onclick="javascript: document.forms['subscribe'].email_address.value=''" /></p>
-            <p><input class="subscribe" name="subscribe" type="submit" value="Subscribe" /></p>
-         </form> -->
+        <h3>Newsletters!</h3>
+        <!-- Side bar contents  -->
         </div>
         <img class="paperclip" src="<c:url value="/resources/images/paperclip.png" />" alt="paperclip" />
         <div class="sidebar">

@@ -1,7 +1,10 @@
 package com.mkyong.web.controller;
 
+import java.util.Collection;
+
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
@@ -15,13 +18,14 @@ public class MainController {
 
 	@RequestMapping(value = { "/", "/welcome**" }, method = RequestMethod.GET)
 	public ModelAndView defaultPage() {
-
+		
+		
 		ModelAndView model = new ModelAndView();
 		model.addObject("title", "Priority Dispatch Service !");
 		model.addObject("message", "This is default page!");
 		model.setViewName("adminWelcome");
+		
 		return model;
-
 	}
 
 	@RequestMapping(value = "/.admin", method = RequestMethod.GET)
@@ -74,5 +78,19 @@ public class MainController {
 		return model;
 
 	}
+	
+	
+	private boolean hasRole(String role) {
+		  Collection<GrantedAuthority> authorities = (Collection<GrantedAuthority>)
+		  SecurityContextHolder.getContext().getAuthentication().getAuthorities();
+		  boolean hasRole = false;
+		  for (GrantedAuthority authority : authorities) {
+		     hasRole = authority.getAuthority().equals(role);
+		     if (hasRole) {
+			  break;
+		     }
+		  }
+		  return hasRole;
+		}
 
 }
