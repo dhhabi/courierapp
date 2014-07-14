@@ -1,17 +1,23 @@
 package org.preet.courier.model;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
 @Entity
 public class MyOrder {
-	@Id @GeneratedValue
-	private int id;
+	@Id @GeneratedValue(strategy=GenerationType.AUTO)
+	private long id;
 	private String sender;
 	private String receiver;	
 	private String pickUpStreet;
@@ -36,7 +42,32 @@ public class MyOrder {
 	private String deliveryPhoneNumber;
 	private String pickUpTime;
 	private String deliveryTime;
+	private String pickUpState;
+	private String deliveryState;
+	@ElementCollection(fetch=FetchType.EAGER)
+	private Collection<TrackingInfo> trackingInfo = new ArrayList<TrackingInfo>();
+	private boolean deliveryComplete = false;
 	
+	
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
+	}
+	public String getPickUpState() {
+		return pickUpState;
+	}
+	public void setPickUpState(String pickUpState) {
+		this.pickUpState = pickUpState;
+	}
+	public String getDeliveryState() {
+		return deliveryState;
+	}
+	public void setDeliveryState(String deliveryState) {
+		this.deliveryState = deliveryState;
+	}
+		
 	public String getPickUpTime() {
 		return pickUpTime;
 	}
@@ -44,12 +75,7 @@ public class MyOrder {
 		this.pickUpTime = pickUpTime;
 	}
 	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
+
 	public String getSender() {
 		return sender;
 	}
@@ -91,6 +117,9 @@ public class MyOrder {
 	}
 	public void setPickUpDate(Date pickUpDate) {
 		this.pickUpDate = pickUpDate;
+		String pattern = "MM/dd/yyyy";
+	    SimpleDateFormat format = new SimpleDateFormat(pattern);
+	    format.format(this.pickUpDate);
 	}
 	public String getPickUpComments() {
 		return pickUpComments;
@@ -103,6 +132,9 @@ public class MyOrder {
 	}
 	public void setDeliveryDate(Date deliveryDate) {
 		this.deliveryDate = deliveryDate;
+		String pattern = "MM/dd/yyyy";
+	    SimpleDateFormat format = new SimpleDateFormat(pattern);
+	    format.format(this.deliveryDate);
 	}
 	public String getDeliveryStreet() {
 		return deliveryStreet;
@@ -175,6 +207,18 @@ public class MyOrder {
 	}
 	public void setDeliveryTime(String deliveryTime) {
 		this.deliveryTime = deliveryTime;
+	}
+	public Collection<TrackingInfo> getTrackingInfo() {
+		return trackingInfo;
+	}
+	public void setTrackingInfo(Collection<TrackingInfo> trackingInfo) {
+		this.trackingInfo = trackingInfo;
+	}
+	public boolean isDeliveryComplete() {
+		return deliveryComplete;
+	}
+	public void setDeliveryComplete(boolean deliveryComplete) {
+		this.deliveryComplete = deliveryComplete;
 	}
 	
 	

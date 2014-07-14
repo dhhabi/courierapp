@@ -3,6 +3,7 @@ package org.preet.courier.controller;
 
 import org.preet.courier.dao.OrderDao;
 import org.preet.courier.model.MyOrder;
+import org.preet.courier.model.TrackingInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
@@ -23,7 +24,7 @@ public class OrderController {
 	public String orderFormRequest(ModelMap model) {
 		MyOrder order = new MyOrder();
 		model.addAttribute("order", order);
-		return "orderFormPage";
+		return "updateOrderFormPage";
 
 	}
 	
@@ -33,10 +34,14 @@ public class OrderController {
 			BindingResult result, SessionStatus status) {
 			
 			ModelAndView model = new ModelAndView();
-			if(orderDao.addOrder(order)){
+			order.getTrackingInfo().add(new TrackingInfo("Order Initialized !", ""));
+			long orderID = orderDao.addOrder(order);
+			if(orderID!=0){
 				model.addObject("status","Order Placed Successfullly");
+				model.addObject("orderId",orderID);
+				model.addObject("order",order);
 			}else{
-				model.addObject("status","Something went wrong please try again");
+				model.addObject("status","Something went wrong go back and please try again");
 			}
 			model.setViewName("orderSubmitSuccess");
 			status.setComplete();

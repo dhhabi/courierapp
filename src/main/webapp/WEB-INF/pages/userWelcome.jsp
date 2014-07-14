@@ -59,7 +59,7 @@
         
       </div>
       <div id="content">
-      <h3>Welcome User !</h3>
+      <h3>${status}</h3>
       </div>
     </div>
     <div id="footer">

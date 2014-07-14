@@ -1,0 +1,167 @@
+#trackingIdForm .sfm_textbox
+{
+    padding:1px;
+}
+#trackingIdForm .sfm_textarea
+{
+    padding:2px;
+    resize:none;
+}
+#trackingIdForm .error_strings
+{
+    font-family:Verdana;
+    font-size:12px;
+    color:#660000;
+}
+#trackingIdForm img
+{
+    border:0;
+}
+#trackingIdForm .loading_div
+{
+    background-color:transparent;
+    background-image:url("images/loading.gif");
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+#trackingIdForm input[type='submit'],input[type='reset']
+{
+    font:inherit;
+    color:inherit;
+}
+#trackingIdForm .sfm_cr_box
+{
+    font-family:Verdana;
+    font-size:10px;
+    color:#888888;
+}
+#trackingIdForm .sfm_cr_box a
+{
+    color:#888888;
+}
+#trackingIdForm .form_outer_div
+{
+    border:none;
+    background-color:#ffffff;
+}
+#trackingIdForm .sfm_form_label
+{
+    background-color:transparent;
+}
+#trackingIdForm .element_label
+{
+    background-color:transparent;
+}
+body#sfm_trackingIdForm_body
+{
+    background-color:transparent;
+    font-family:Arial;
+    font-size:12px;
+    color:#000000;
+    margin:0px;
+}
+#trackingIdForm .form_outer_div
+{
+    font-family:Arial;
+    font-size:12px;
+    color:#000000;
+}
+#trackingIdForm .form_subheading
+{
+    background-color:transparent;
+    margin:0;
+    padding:0;
+}
+#trackingIdForm .sfm_float_error_box
+{
+    font-family:Verdana;
+    font-size:12px;
+    color:#eeeeee;
+    background:none repeat scroll 0 0 #333333;
+    border:0;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow:0 0 4px #333;
+    border:none;
+}
+#trackingIdForm .sfm_close_box
+{
+    font-family:Verdana;
+    font-size:12px;
+    color:#eeeeee;
+}
+#trackingIdForm .progress_box_container
+{
+    border:1px solid #8e8e8e;
+    background-color:#cccccc;
+    font-family:Arial;
+    font-size:10px;
+    color:#ffffff;
+    text-align:center;
+    vertical-align:middle;
+}
+#trackingIdForm .progress_box
+{
+    background-color:#333333;
+    width:2px;
+    float:left;
+    margin:2px;
+}
+#trackingIdForm .page_heading
+{
+    background-color:transparent;
+    margin:0;
+    padding:0;
+}
+#trackingIdForm .page_number
+{
+    background-color:transparent;
+}
+
+
+#trackingIdForm #label_container
+{
+    position:absolute;
+    left:37px;
+    top:48px;
+    width:134px;
+    height:20px;
+    z-index:1;
+}
+#trackingIdForm #label
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#trackingIdForm #orderId_container
+{
+    position:absolute;
+    left:46px;
+    top:74px;
+    z-index:3;
+}
+#trackingIdForm #orderId
+{
+    float:left;
+    width:176px;
+    z-index:3;
+}
+#trackingIdForm #Submit_container
+{
+    position:absolute;
+    left:149px;
+    top:104px;
+    width:80px;
+    height:25px;
+    z-index:2;
+}
+#trackingIdForm #Submit
+{
+    float:left;
+    width:80px;
+    height:25px;
+    z-index:2;
+}

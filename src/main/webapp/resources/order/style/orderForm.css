@@ -384,38 +384,6 @@ body#sfm_orderForm_body
     width:78px;
     z-index:17;
 }
-#orderForm #label9_container
-{
-    position:absolute;
-    left:44px;
-    top:160px;
-    width:60px;
-    height:20px;
-    z-index:10;
-}
-#orderForm #label9
-{
-    position:absolute;
-    top:3px;
-    right:0px;
-    text-align:right;
-}
-#orderForm #label17_container
-{
-    position:absolute;
-    left:462px;
-    top:160px;
-    width:60px;
-    height:20px;
-    z-index:23;
-}
-#orderForm #label17
-{
-    position:absolute;
-    top:3px;
-    right:0px;
-    text-align:right;
-}
 #orderForm #label8_container
 {
     position:absolute;
@@ -448,31 +416,37 @@ body#sfm_orderForm_body
     right:0px;
     text-align:right;
 }
-#orderForm #pickUpPhoneNumber_container
+#orderForm #label28_container
 {
     position:absolute;
-    left:113px;
-    top:160px;
-    z-index:8;
+    left:44px;
+    top:162px;
+    width:60px;
+    height:20px;
+    z-index:49;
 }
-#orderForm #pickUpPhoneNumber
-{
-    float:left;
-    width:114px;
-    z-index:8;
-}
-#orderForm #deliveryPhoneNumber_container
+#orderForm #label28
 {
     position:absolute;
-    left:531px;
-    top:160px;
-    z-index:21;
+    top:3px;
+    right:0px;
+    text-align:right;
 }
-#orderForm #deliveryPhoneNumber
+#orderForm #label29_container
 {
-    float:left;
-    width:114px;
-    z-index:21;
+    position:absolute;
+    left:463px;
+    top:162px;
+    width:60px;
+    height:20px;
+    z-index:51;
+}
+#orderForm #label29
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
 }
 #orderForm #pickUpDate_container
 {
@@ -534,6 +508,48 @@ body#sfm_orderForm_body
     top:50%;
     margin-top:-10px;
 }
+#orderForm #deliveryState_container
+{
+    position:absolute;
+    left:531px;
+    top:161px;
+    z-index:50;
+}
+#orderForm #deliveryState
+{
+    float:left;
+    width:114px;
+    z-index:50;
+}
+#orderForm #pickUpState_container
+{
+    position:absolute;
+    left:113px;
+    top:162px;
+    z-index:45;
+}
+#orderForm #pickUpState
+{
+    float:left;
+    width:114px;
+    z-index:45;
+}
+#orderForm #label9_container
+{
+    position:absolute;
+    left:44px;
+    top:187px;
+    width:60px;
+    height:20px;
+    z-index:10;
+}
+#orderForm #label9
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
 #orderForm #label27_container
 {
     position:absolute;
@@ -541,9 +557,25 @@ body#sfm_orderForm_body
     top:187px;
     width:60px;
     height:20px;
-    z-index:47;
+    z-index:48;
 }
 #orderForm #label27
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#orderForm #label17_container
+{
+    position:absolute;
+    left:462px;
+    top:188px;
+    width:60px;
+    height:20px;
+    z-index:23;
+}
+#orderForm #label17
 {
     position:absolute;
     top:3px;
@@ -570,7 +602,7 @@ body#sfm_orderForm_body
     top:188px;
     width:60px;
     height:20px;
-    z-index:46;
+    z-index:47;
 }
 #orderForm #label26
 {
@@ -584,19 +616,45 @@ body#sfm_orderForm_body
     position:absolute;
     left:760px;
     top:187px;
-    z-index:45;
+    z-index:46;
 }
 #orderForm #deliveryTime
 {
     float:left;
     width:70px;
-    z-index:45;
+    z-index:46;
+}
+#orderForm #pickUpPhoneNumber_container
+{
+    position:absolute;
+    left:113px;
+    top:188px;
+    z-index:8;
+}
+#orderForm #pickUpPhoneNumber
+{
+    float:left;
+    width:114px;
+    z-index:8;
+}
+#orderForm #deliveryPhoneNumber_container
+{
+    position:absolute;
+    left:531px;
+    top:188px;
+    z-index:21;
+}
+#orderForm #deliveryPhoneNumber
+{
+    float:left;
+    width:114px;
+    z-index:21;
 }
 #orderForm #label11_container
 {
     position:absolute;
     left:45px;
-    top:211px;
+    top:213px;
     width:60px;
     height:20px;
     z-index:12;
@@ -612,7 +670,7 @@ body#sfm_orderForm_body
 {
     position:absolute;
     left:463px;
-    top:211px;
+    top:216px;
     width:60px;
     height:20px;
     z-index:25;
@@ -627,8 +685,8 @@ body#sfm_orderForm_body
 #orderForm #pickUpComments_container
 {
     position:absolute;
-    left:114px;
-    top:213px;
+    left:113px;
+    top:216px;
     z-index:11;
 }
 #orderForm #pickUpComments
@@ -642,7 +700,7 @@ body#sfm_orderForm_body
 {
     position:absolute;
     left:532px;
-    top:213px;
+    top:216px;
     z-index:24;
 }
 #orderForm #deliveryComments

@@ -1,15 +1,43 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans
-	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
-
-	<bean id="dataSource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans     
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+        
+        <context:annotation-config />
+	
+	<!-- <bean id="dataSource"
+		class="org.apache.commons.dbcp2.BasicDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://53af8dbb5973ca17a8000386-dhabi.rhcloud.com:61356/courierapp" />
-		<property name="username" value="admin5BS6S9n" />
-		<property name="password" value="iz_YDUqMFlqw" />
-	</bean>
+		<property name="url" value="jdbc:mysql://localhost:3306/test" />
+		<property name="username" value="root" />
+		<property name="password" value="" />
+		<property name="initialSize" value="2" />
+		<property name="maxActive" value="5"/>
+	</bean> -->
+	
+	
+	
+		<bean id="dataSource"
+                class="org.apache.commons.dbcp2.BasicDataSource">
+                <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+                <property name="url" value="jdbc:mysql://53af8dbb5973ca17a8000386-dhabi.rhcloud.com:61356/courierapp" />
+                <property name="username" value="admin5BS6S9n" />
+                <property name="password" value="iz_YDUqMFlqw" />
+               
+        </bean>
+	 
+	
 
+	<!-- <bean id="deliveryBoyDao" class="org.preet.courier.dao.DeliveryBoyDaoImpl">
+        <property name="dataSource" ref="dataSource"/>
+    </bean> -->
+	
+	
 </beans>

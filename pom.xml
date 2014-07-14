@@ -104,12 +104,15 @@
 	<version>3.6.4.Final</version>
 	</dependency>
 	
-	
-	
-		
 	<!-- Hibernate Dependencies End -->
 
-
+	<!-- DBCP Dependency  -->
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-dbcp2</artifactId>
+		<version>2.0.1</version>
+	</dependency>
+	
 	</dependencies>
 	
   <profiles>

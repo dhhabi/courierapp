@@ -12,19 +12,23 @@ public class OrderDaoImpl implements OrderDao {
 	private SessionFactory sessionFactory;
 	
 	@Override
-	public boolean addOrder(MyOrder order) {
+	public long addOrder(MyOrder order) {
 		// TODO Auto-generated method stub
 		Session session = sessionFactory.openSession();
+		long orderId;
 		try{
 		session.beginTransaction();
-		session.save(order);
+		orderId = (Long) session.save(order);
+		
 		session.getTransaction().commit();
-		session.close();
 		}catch(Exception ex){
 			session.getTransaction().rollback();
-			return false;
+			return 0;
+		}finally{
+			session.close();
 		}
-		return true;
+		
+		return orderId;
 	}
 
 	public SessionFactory getSessionFactory() {
@@ -34,6 +38,38 @@ public class OrderDaoImpl implements OrderDao {
 	@Autowired
 	public void setSessionFactory(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
+	}
+
+	@Override
+	public MyOrder getOrderById(long orderId) {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.openSession();
+		MyOrder order;
+		try{
+		session.beginTransaction();
+		order = (MyOrder)session.get(MyOrder.class, orderId);
+		}catch(Exception ex){
+			return null;
+		}finally{
+			session.close();
+		}
+		return order;
+	}
+
+	@Override
+	public boolean updateOrder(MyOrder order) {
+		Session session = sessionFactory.openSession();
+		try{
+		session.beginTransaction();
+		session.update(order);
+		session.getTransaction().commit();
+		}catch(Exception ex){
+			session.getTransaction().rollback();
+			return false;
+		}finally{
+			session.close();
+		}
+		return true;
 	}
 	
 }

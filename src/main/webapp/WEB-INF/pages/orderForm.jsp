@@ -79,23 +79,17 @@
                <div id='deliveryZipCode_container'>
                   <form:input path="deliveryZipCode" type='text' name='deliveryZipCode' id='deliveryZipCode' size='20' class='sfm_textbox'/>
                </div>
-               <div id='label9_container' class='sfm_form_label'>
-                  <label id='label9' for='pickUpPhoneNumber'>Phone</label>
-               </div>
-               <div id='label17_container' class='sfm_form_label'>
-                  <label id='label17' for='deliveryPhoneNumber'>Phone</label>
-               </div>
                <div id='label8_container' class='sfm_form_label'>
                   <label id='label8' for='pickUpDate'>Date</label>
                </div>
                <div id='label16_container' class='sfm_form_label'>
                   <label id='label16' for='deliveryDate'>Date</label>
                </div>
-               <div id='pickUpPhoneNumber_container'>
-                  <form:input path="pickUpPhoneNumber" type='text' name='pickUpPhoneNumber' id='pickUpPhoneNumber' size='20' class='sfm_textbox'/>
+               <div id='label28_container' class='sfm_form_label'>
+                  <label id='label28' for='pickUpState'>State</label>
                </div>
-               <div id='deliveryPhoneNumber_container'>
-                  <form:input path="deliveryPhoneNumber" type='text' name='deliveryPhoneNumber' id='deliveryPhoneNumber' size='20' class='sfm_textbox'/>
+               <div id='label29_container' class='sfm_form_label'>
+                  <label id='label29' for='deliveryState'>State</label>
                </div>
                <div class='sfm_element_container' id='pickUpDate_container'>
                   <form:input path="pickUpDate" type='text' name='pickUpDate' id='pickUpDate'/>
@@ -111,8 +105,20 @@
                      <img id='deliveryDate_image' class='sfm_datepicker_icon' src='<c:url value="/resources/order/images/date-picker.gif"/>' width='20' height='20' alt='Click here to open the date picker'/>
                   </div>
                </div>
+               <div id='deliveryState_container'>
+                  <form:input path="deliveryState" type='text' name='deliveryState' id='deliveryState' size='20' class='sfm_textbox'/>
+               </div>
+               <div id='pickUpState_container'>
+                  <form:input path="pickUpState" type='text' name='pickUpState' id='pickUpState' size='20' class='sfm_textbox'/>
+               </div>
+               <div id='label9_container' class='sfm_form_label'>
+                  <label id='label9' for='pickUpPhoneNumber'>Phone</label>
+               </div>
                <div id='label27_container' class='sfm_form_label'>
                   <label id='label27' for='deliveryTime'>Time</label>
+               </div>
+               <div id='label17_container' class='sfm_form_label'>
+                  <label id='label17' for='deliveryPhoneNumber'>Phone</label>
                </div>
                <div id='pickUpTime_container'>
                   <form:input path="pickUpTime" type='text' name='pickUpTime' id='pickUpTime' value='12:00AM' size='20' class='sfm_textbox'/>
@@ -122,6 +128,12 @@
                </div>
                <div id='deliveryTime_container'>
                   <form:input path="deliveryTime" type='text' name='deliveryTime' id='deliveryTime' value='12:00AM' size='20' class='sfm_textbox'/>
+               </div>
+               <div id='pickUpPhoneNumber_container'>
+                  <form:input path="pickUpPhoneNumber" type='text' name='pickUpPhoneNumber' id='pickUpPhoneNumber' size='20' class='sfm_textbox'/>
+               </div>
+               <div id='deliveryPhoneNumber_container'>
+                  <form:input path="deliveryPhoneNumber" type='text' name='deliveryPhoneNumber' id='deliveryPhoneNumber' size='20' class='sfm_textbox'/>
                </div>
                <div id='label11_container' class='sfm_form_label'>
                   <label id='label11' for='pickUpComments'>Comments</label>
@@ -203,13 +215,14 @@ orderFormValidator.addValidation("pickUpZipCode",{regexp:"^\\d{5}(-\\d{4})?$",me
 orderFormValidator.addValidation("deliveryCity",{required:true,message:"Please fill in deliveryCity"} );
 orderFormValidator.addValidation("deliveryZipCode",{required:true,message:"Please fill in deliveryZipCode"} );
 orderFormValidator.addValidation("deliveryZipCode",{regexp:"^\\d{5}(-\\d{4})?$",message:"Please enter a valid input for deliveryZipCode"} );
+orderFormValidator.addValidation("pickUpDate",{before_date:"Field(deliveryDate)",message:"The date pickUpDate should be before deliveryDate"} );
+orderFormValidator.addValidation("deliveryDate",{after_date:"Field(pickUpDate)",message:"The date deliveryDate should be after pickUpDate"} );
+orderFormValidator.addValidation("deliveryState",{required:true,message:"Please fill in deliveryState"} );
+orderFormValidator.addValidation("pickUpTime",{regexp:"^(0?\\d|1[0-2])[:\\.][0-5]\\d\\s*(AM|PM|am|pm)?$",message:"Please enter a valid input for pickUpTime"} );
+orderFormValidator.addValidation("deliveryTime",{regexp:"^(0?\\d|1[0-2])[:\\.][0-5]\\d\\s*(AM|PM|am|pm)?$",message:"Please enter a valid input for deliveryTime"} );
 orderFormValidator.addValidation("pickUpPhoneNumber",{regexp:"(?:[\\(][0-9]{3}[\\)]|[0-9]{3})[-. ]?[0-9]{3}[-. ]?[0-9]{4}$",message:"Please enter a valid input for pickUpPhoneNumber"} );
 orderFormValidator.addValidation("deliveryPhoneNumber",{regexp:"(?:[\\(][0-9]{3}[\\)]|[0-9]{3})[-. ]?[0-9]{3}[-. ]?[0-9]{4}$",message:"Please enter a valid input for deliveryPhoneNumber"} );
 orderFormValidator.addValidation("deliveryPhoneNumber",{required:true,message:"Please fill in deliveryPhoneNumber"} );
-orderFormValidator.addValidation("pickUpDate",{before_date:"Field(deliveryDate)",message:"The date pickUpDate should be before deliveryDate"} );
-orderFormValidator.addValidation("deliveryDate",{after_date:"Field(pickUpDate)",message:"The date deliveryDate should be after pickUpDate"} );
-orderFormValidator.addValidation("pickUpTime",{regexp:"^(0?\\d|1[0-2])[:\\.][0-5]\\d\\s*(AM|PM|am|pm)?$",message:"Please enter a valid input for pickUpTime"} );
-orderFormValidator.addValidation("deliveryTime",{regexp:"^(0?\\d|1[0-2])[:\\.][0-5]\\d\\s*(AM|PM|am|pm)?$",message:"Please enter a valid input for deliveryTime"} );
 orderFormValidator.addValidation("pickUpComments",{maxlen:"224",message:"The length of the input for pickUpComments should not exceed 224"} );
 orderFormValidator.addValidation("deliveryComments",{maxlen:"224",message:"The length of the input for deliveryComments should not exceed 224"} );
 orderFormValidator.addValidation("noOfPieces",{numeric:true,message:"The input for noOfPieces should be a valid numeric value"} );

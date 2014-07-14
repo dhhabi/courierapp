@@ -1,0 +1,303 @@
+#updateTrackingInfo .sfm_textbox
+{
+    padding:1px;
+}
+#updateTrackingInfo .sfm_textarea
+{
+    padding:2px;
+    resize:none;
+}
+#updateTrackingInfo .error_strings
+{
+    font-family:Verdana;
+    font-size:12px;
+    color:#660000;
+}
+#updateTrackingInfo img
+{
+    border:0;
+}
+#updateTrackingInfo .loading_div
+{
+    background-color:transparent;
+    background-image:url("images/loading.gif");
+    background-position:center center;
+    background-repeat:no-repeat;
+}
+#updateTrackingInfo input[type='submit'],input[type='reset']
+{
+    font:inherit;
+    color:inherit;
+}
+#updateTrackingInfo .sfm_cr_box
+{
+    font-family:Verdana;
+    font-size:10px;
+    color:#888888;
+}
+#updateTrackingInfo .sfm_cr_box a
+{
+    color:#888888;
+}
+#updateTrackingInfo .form_outer_div
+{
+    border:none;
+    background-color:#ffffff;
+}
+#updateTrackingInfo .sfm_form_label
+{
+    background-color:transparent;
+}
+#updateTrackingInfo .element_label
+{
+    background-color:transparent;
+}
+body#sfm_updateTrackingInfo_body
+{
+    background-color:transparent;
+    font-family:Arial;
+    font-size:12px;
+    color:#000000;
+    margin:0px;
+}
+#updateTrackingInfo .form_outer_div
+{
+    font-family:Arial;
+    font-size:12px;
+    color:#000000;
+}
+#updateTrackingInfo .form_subheading
+{
+    background-color:transparent;
+    margin:0;
+    padding:0;
+}
+#updateTrackingInfo .sfm_float_error_box
+{
+    font-family:Verdana;
+    font-size:12px;
+    color:#eeeeee;
+    background:none repeat scroll 0 0 #333333;
+    border:0;
+    border-radius:4px;
+    -moz-border-radius:4px;
+    -webkit-border-radius:4px;
+    box-shadow:0 0 4px #333;
+    border:none;
+}
+#updateTrackingInfo .sfm_close_box
+{
+    font-family:Verdana;
+    font-size:12px;
+    color:#eeeeee;
+}
+#updateTrackingInfo .progress_box_container
+{
+    border:1px solid #8e8e8e;
+    background-color:#cccccc;
+    font-family:Arial;
+    font-size:10px;
+    color:#ffffff;
+    text-align:center;
+    vertical-align:middle;
+}
+#updateTrackingInfo .progress_box
+{
+    background-color:#333333;
+    width:2px;
+    float:left;
+    margin:2px;
+}
+#updateTrackingInfo .page_heading
+{
+    background-color:transparent;
+    margin:0;
+    padding:0;
+}
+#updateTrackingInfo .page_number
+{
+    background-color:transparent;
+}
+
+
+#updateTrackingInfo #label4_container
+{
+    position:absolute;
+    left:305px;
+    top:15px;
+    width:210px;
+    height:20px;
+    z-index:11;
+}
+#updateTrackingInfo #label4
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#updateTrackingInfo #label2_container
+{
+    position:absolute;
+    left:317px;
+    top:35px;
+    width:34px;
+    height:20px;
+    z-index:7;
+}
+#updateTrackingInfo #label2
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#updateTrackingInfo #label3_container
+{
+    position:absolute;
+    left:409px;
+    top:35px;
+    width:60px;
+    height:20px;
+    z-index:8;
+}
+#updateTrackingInfo #label3
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#updateTrackingInfo #DatePicker_container
+{
+    position:absolute;
+    left:326px;
+    top:62px;
+    width:110px;
+    height:22px;
+    z-index:9;
+}
+#updateTrackingInfo #DatePicker
+{
+    float:left;
+    width:78px;
+    z-index:9;
+    margin:0px;
+}
+#updateTrackingInfo #DatePicker_image_container
+{
+    float:left;
+    width:20px;
+    z-index:9;
+    height:100%;
+    position:relative;
+}
+#updateTrackingInfo #DatePicker_image
+{
+    position:absolute;
+    top:50%;
+    margin-top:-10px;
+}
+#updateTrackingInfo #deliveryTime_container
+{
+    position:absolute;
+    left:444px;
+    top:63px;
+    z-index:10;
+}
+#updateTrackingInfo #deliveryTime
+{
+    float:left;
+    width:60px;
+    z-index:10;
+}
+#updateTrackingInfo #label_container
+{
+    position:absolute;
+    left:3px;
+    top:82px;
+    width:95px;
+    height:20px;
+    z-index:4;
+}
+#updateTrackingInfo #label
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#updateTrackingInfo #infoType_container
+{
+    position:absolute;
+    left:113px;
+    top:83px;
+    z-index:3;
+}
+#updateTrackingInfo #infoType
+{
+    float:left;
+    width:178px;
+    height:22px;
+    z-index:3;
+}
+#updateTrackingInfo #box_element
+{
+    position:absolute;
+    left:299px;
+    top:5px;
+    width:234px;
+    height:104px;
+    z-index:1;
+    border:1px solid #000000;
+    background-color:transparent;
+    border-radius:10px;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+}
+#updateTrackingInfo #label1_container
+{
+    position:absolute;
+    left:8px;
+    top:112px;
+    width:60px;
+    height:20px;
+    z-index:5;
+}
+#updateTrackingInfo #label1
+{
+    position:absolute;
+    top:3px;
+    right:0px;
+    text-align:right;
+}
+#updateTrackingInfo #details_container
+{
+    position:absolute;
+    left:79px;
+    top:116px;
+    z-index:2;
+}
+#updateTrackingInfo #details
+{
+    float:left;
+    width:243px;
+    height:87px;
+    z-index:2;
+}
+#updateTrackingInfo #Submit_container
+{
+    position:absolute;
+    left:250px;
+    top:220px;
+    width:80px;
+    height:25px;
+    z-index:6;
+}
+#updateTrackingInfo #Submit
+{
+    float:left;
+    width:80px;
+    height:25px;
+    z-index:6;
+}
