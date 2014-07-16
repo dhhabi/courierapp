@@ -1,5 +1,7 @@
 package org.preet.courier.controller;
 
+import java.util.List;
+
 import org.preet.courier.dao.OrderDao;
 import org.preet.courier.model.MyOrder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,14 +9,22 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-@RequestMapping("/tracking")
-public class TrackingController {
+@RequestMapping("/pendingOrders.user")
+public class PendingOrdersController {
 	
 	private OrderDao orderDao;
 	
+	@RequestMapping(method = RequestMethod.GET)
+	public String orderFormRequest(ModelMap model) {
+		
+		List<MyOrder> pendingOrdersList = orderDao.getPendingOrders();
+		model.addAttribute("pendingOrdersList", pendingOrdersList);
+		return "pendingOrders";
+
+	}
+
 	public OrderDao getOrderDao() {
 		return orderDao;
 	}
@@ -23,16 +33,5 @@ public class TrackingController {
 	public void setOrderDao(OrderDao orderDao) {
 		this.orderDao = orderDao;
 	}
-
-	@RequestMapping(method = RequestMethod.GET)
-	public String updateTrackingFormRequest(@RequestParam("orderId")long orderId,ModelMap model) {
-		
-		if(orderId==0){
-			return "trackingInfoFirstPage";
-		}
-		MyOrder order = orderDao.getOrderById(orderId);
-		model.addAttribute("order",order);		
-		return "trackingInfoPage";
-
-	}
+	
 }

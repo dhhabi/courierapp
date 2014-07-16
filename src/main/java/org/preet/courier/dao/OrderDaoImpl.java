@@ -1,5 +1,8 @@
 package org.preet.courier.dao;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.preet.courier.model.MyOrder;
@@ -71,5 +74,26 @@ public class OrderDaoImpl implements OrderDao {
 		}
 		return true;
 	}
+
+	@SuppressWarnings("unchecked")
+	@Override
+	public List<MyOrder> getPendingOrders() {
+		// TODO Auto-generated method stub
+		Session session = sessionFactory.openSession();
+		List<MyOrder> pendingOrderList = null;
+		try{
+			session.beginTransaction();
+			Query query = session.createQuery("from MyOrder where deliveryComplete=false");
+			pendingOrderList =(List<MyOrder>)query.list();
+			session.getTransaction().commit();
+			}catch(Exception ex){
+				session.getTransaction().rollback();
+				return null;
+			}finally{
+				session.close();
+			}
+		return pendingOrderList;
+	}
+
 	
 }
